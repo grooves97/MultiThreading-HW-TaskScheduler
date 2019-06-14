@@ -1,0 +1,26 @@
+﻿<Window x:Class="TaskScheduler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskScheduler"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid>
+        <Button Content="Plan" FontSize="20" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="120" Click="StartPlanButtonClick" Height="40"/>
+        <ComboBox HorizontalAlignment="Center" Margin="60,10,0,0" VerticalAlignment="Top" Width="180" Name="jobTypeComboBox">
+            <TextBlock Text="Отправка Email"></TextBlock>
+            <TextBlock Text="Скачка файла"></TextBlock>
+            <TextBlock Text="Перемещение каталога"></TextBlock>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Center" Margin="60,230,0,0" VerticalAlignment="Top" Width="180" Name="repeatComboBox">
+            <TextBlock Text="Раз в неделю"></TextBlock>
+            <TextBlock Text="Раз в месяц"></TextBlock>
+            <TextBlock Text="Раз в год"></TextBlock>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="190,10,0,0" TextWrapping="Wrap" Text="Task" VerticalAlignment="Top" Height="22" Width="32" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="136,53,0,0" TextWrapping="Wrap" Text="Date of Task" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="154,230,0,0" TextWrapping="Wrap" Text="Repeat" VerticalAlignment="Top" FontSize="16" Height="22"/>
+        <Calendar HorizontalAlignment="Center" Margin="60,49,0,0" VerticalAlignment="Top" IsTodayHighlighted="False" Name="calendar"/>
+    </Grid>
+</Window>
